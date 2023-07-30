@@ -12,7 +12,7 @@
  *         (E_OK): The function is done successfully
  *         (E_NOK): The function had issue to perform this action  
  */
-Std_ReturnType button_initialize(button_t *btn){
+Std_ReturnType button_initialize(const button_t *btn){
     Std_ReturnType retVal=E_OK;
     if(NULL==btn){
         retVal=E_NOT_OK;
@@ -30,7 +30,7 @@ Std_ReturnType button_initialize(button_t *btn){
  *         (E_OK): The function is done successfully
  *         (E_NOK): The function had issue to perform this action  
  */
-Std_ReturnType button_read_state(button_t *btn,button_state_t *btn_state ){
+Std_ReturnType button_read_state(const button_t *btn,button_state_t *btn_state ){
     Std_ReturnType retVal=E_OK;
     logic_t status=LOW;
     if(NULL==btn ||NULL==btn_state){

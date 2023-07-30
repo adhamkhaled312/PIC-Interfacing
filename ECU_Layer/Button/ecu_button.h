@@ -34,7 +34,7 @@ typedef struct{
  *         (E_OK): The function is done successfully
  *         (E_NOK): The function had issue to perform this action  
  */
-Std_ReturnType button_initialize(button_t *btn);
+Std_ReturnType button_initialize(const button_t *btn);
 /**
  * @brief read the status of the button (pressed or not)
  * @param btn refrence to the button configurations @ref button_t
@@ -43,6 +43,6 @@ Std_ReturnType button_initialize(button_t *btn);
  *         (E_OK): The function is done successfully
  *         (E_NOK): The function had issue to perform this action  
  */
-Std_ReturnType button_read_state(button_t *btn,button_state_t *btn_state );
+Std_ReturnType button_read_state(const button_t *btn,button_state_t *btn_state );
 #endif	/* ECU_BUTTON_H */
 
