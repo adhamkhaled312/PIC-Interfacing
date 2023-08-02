@@ -28,7 +28,7 @@ typedef struct{
 }button_t;
 /* ----------------Functions Declarations----------------*/
 /**
- * @brief initialize the led to be input
+ * @brief initialize the pin to be input
  * @param btn refrence to the button configurations @ref button_t
  * @return Std_ReturnType status of the process
  *         (E_OK): The function is done successfully
