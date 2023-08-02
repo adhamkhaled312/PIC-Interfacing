@@ -5,6 +5,13 @@
  * Created on August 1, 2023, 8:48 PM
  */
 #include "ecu_seven_seg.h"
+/**
+ * @brief initialize the pins to be output
+ * @param segment refrence to the seven segment configurations @ref segment_t
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType seven_segment_initialize(const segment_t *segment){
     Std_ReturnType retVal=E_OK;
     if(NULL==segment){
@@ -18,6 +25,14 @@ Std_ReturnType seven_segment_initialize(const segment_t *segment){
     }
     return retVal;
 }
+/**
+ * @brief write number on the seven segment
+ * @param segment refrence to the seven segment configurations @ref segment_t
+ * @param number the number to be written
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType seven_segment_write_number(const segment_t *segment,uint8 number){
     Std_ReturnType retVal=E_OK;
     if(NULL==segment || number>SEGMENT_MAX_NUMBER){

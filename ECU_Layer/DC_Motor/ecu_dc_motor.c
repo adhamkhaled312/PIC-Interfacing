@@ -5,7 +5,13 @@
  * Created on July 31, 2023, 2:13 AM
  */
 #include "ecu_dc_motor.h"
-
+/**
+ * @brief initialize the pins to be output
+ * @param motor refrence to the dc motor configurations @ref dc_motor_t
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType dc_motor_initialize(const dc_motor_t *motor){
     Std_ReturnType retVal=E_OK;
     if(NULL==motor){
@@ -17,6 +23,13 @@ Std_ReturnType dc_motor_initialize(const dc_motor_t *motor){
     }
     return retVal; 
 }
+/**
+ * @brief move the motor right (forward)
+ * @param motor refrence to the dc motor configurations @ref dc_motor_t
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType dc_motor_move_right(const dc_motor_t *motor){
     Std_ReturnType retVal=E_OK;
     if(NULL==motor){
@@ -28,6 +41,13 @@ Std_ReturnType dc_motor_move_right(const dc_motor_t *motor){
     }
     return retVal; 
 }
+/**
+ * @brief move the motor left (backward)
+ * @param motor refrence to the dc motor configurations @ref dc_motor_t
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType dc_motor_move_left(const dc_motor_t *motor){
     Std_ReturnType retVal=E_OK;
     if(NULL==motor){
@@ -39,6 +59,13 @@ Std_ReturnType dc_motor_move_left(const dc_motor_t *motor){
     }
     return retVal; 
 }
+/**
+ * @brief stop the motor
+ * @param motor refrence to the dc motor configurations @ref dc_motor_t
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType dc_motor_move_stop(const dc_motor_t *motor){
     Std_ReturnType retVal=E_OK;
     if(NULL==motor){

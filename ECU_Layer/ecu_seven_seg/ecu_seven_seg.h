@@ -29,7 +29,22 @@ typedef struct{
     segment_type_t segment_type;
 }segment_t;
 /* ----------------Functions Declarations----------------*/
+/**
+ * @brief initialize the pins to be output
+ * @param segment refrence to the seven segment configurations @ref segment_t
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType seven_segment_initialize(const segment_t *segment);
+/**
+ * @brief write number on the seven segment
+ * @param segment refrence to the seven segment configurations @ref segment_t
+ * @param number the number to be written
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType seven_segment_write_number(const segment_t *segment,uint8 number);
 
 #endif	/* ECU_SEVEN_SEG_H */
