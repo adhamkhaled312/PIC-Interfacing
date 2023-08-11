@@ -10,6 +10,7 @@
 /* ----------------Includes----------------*/
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /* ----------------Macro Declarations---------------*/
 /* ----------------Macro Functions Declarations----------------*/
 /* ----------------Data Type Declarations----------------*/
