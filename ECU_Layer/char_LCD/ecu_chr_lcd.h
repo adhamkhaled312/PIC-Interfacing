@@ -154,12 +154,64 @@ Std_ReturnType lcd_8bit_send_char_data(const chr_lcd_8bit_t *lcd,uint8 data);
  *         (E_NOK): The function had issue to perform this action  
  */
 Std_ReturnType lcd_8bit_send_char_data_pos(const chr_lcd_8bit_t *lcd,uint8 row,uint8 column,uint8 data);
+/**
+ * @brief send string for 8 bit lcd tp display
+ * @param lcd refrence to the lcd configurations @ref chr_lcd_8bit_t
+ * @param str the string to be displayed
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType lcd_8bit_send_string(const chr_lcd_8bit_t *lcd,uint8 *str);
+/**
+ * @brief send string to display it on specific position for 8 bit lcd
+ * @param lcd refrence to the lcd configurations @ref chr_lcd_8bit_t
+ * @param row the row to display the string on 
+ * @param column the column to display the string on
+ * @param str the string to be displayed
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType lcd_8bit_send_string_pos(const chr_lcd_8bit_t *lcd,uint8 row,uint8 column,uint8 *str);
+/**
+ * @brief  send a custom character to display it on specific position for 8 bit lcd 
+ * @param lcd refrence to the lcd configurations @ref chr_lcd_8bit_t
+ * @param row the row to display the char on 
+ * @param column the column to display the char on
+ * @param chr the char to be diplayed
+ * @param mem_pos the position in CGRAM to store the custom character
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType lcd_8bit_send_custom_char(const chr_lcd_8bit_t *lcd,uint8 row,uint8 column,const uint8 chr[],uint8 mem_pos);
-
+/**
+ * @brief convert uint8 number to string
+ * @param value the number to be converted
+ * @param str the string to store the number in 
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType convert_byte_to_string(uint8 value,uint8 *str);
+/**
+ * @brief convert uint16 number to string
+ * @param value the number to be converted
+ * @param str the string to store the number in 
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType convert_short_to_string(uint16 value,uint8 *str);
+/**
+ * @brief convert uint32 number to string
+ * @param value the number to be converted
+ * @param str the string to store the number in 
+ * @return Std_ReturnType status of the process
+ *         (E_OK): The function is done successfully
+ *         (E_NOK): The function had issue to perform this action  
+ */
 Std_ReturnType convert_int_to_string(uint32 value,uint8 *str);
 #endif	/* ECU_CHR_LCD_H */
 
