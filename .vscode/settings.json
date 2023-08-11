@@ -2,6 +2,7 @@
     "files.associations": {
         "hal_gpio.h": "c",
         "application.h": "c",
-        "ecu_dc_motor_cfg.h": "c"
+        "ecu_dc_motor_cfg.h": "c",
+        "string.h": "c"
     }
 }
