@@ -3,6 +3,13 @@
         "hal_gpio.h": "c",
         "application.h": "c",
         "ecu_dc_motor_cfg.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "ecu_chr_lcd.h": "c",
+        "ecu_chr_lcd_cfg.h": "c",
+        "mcal_interrupt_config.h": "c",
+        "mcal_std_types.h": "c",
+        "mcal_interrupt_gen_cfg.h": "c",
+        "mcal_interrupt_manager.h": "c",
+        "mcal_external_interrupt.h": "c"
     }
 }
