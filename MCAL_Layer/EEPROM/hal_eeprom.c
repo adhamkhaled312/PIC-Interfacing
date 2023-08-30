@@ -1,4 +1,4 @@
-/* /
+ /*
  * File:   hal_eeprom.c
  * Author: ADHAM KHALED
  *
@@ -22,7 +22,9 @@ Std_ReturnType eeprom_write_byte(uint16 add,uint8 data){
     EECON1bits.EEPGD=EEPROM_ACCESS_EEPROM_PROGRAM_MEMORY;
     EECON1bits.CFGS=EEPROM_ACCESS_FLASH_EEPROM_MEMORY;
     EECON1bits.WREN=EEPROM_ALLOW_WRITE_CYCLES;
+    #if INTERRUPT_PRIORITY_LEVELS_ENABLE!=INTERRUPT_FEATURE_ENABLE
     INTERRUPT_GlobalInterruptDisable();
+    #endif
     EECON2=0x55;
     EECON2=0x0AA;
     EECON1bits.WR=EEPROM_INITIATE_DATA_WRTIE_EARSE;
