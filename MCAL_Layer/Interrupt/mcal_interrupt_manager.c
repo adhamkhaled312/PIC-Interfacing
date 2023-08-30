@@ -66,5 +66,8 @@ void __interrupt() InterruptManager(void){
         RB7_flag=1;
         RB7_ISR(1);
     }
+    if(PIE1bits.ADIE==INTERRUPT_ENABLE && PIR1bits.ADIF==INTERRUPT_OCCUR){
+        ADC_ISR();
+    }
 }
 #endif

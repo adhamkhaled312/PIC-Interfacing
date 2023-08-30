@@ -269,7 +269,7 @@ static Std_ReturnType interrupt_INTx_enable(const interrupt_INTx_t *int_obj){
                 break;
         case INTERRUPT_EXTERNAL_INT1:
 #if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE 
-                INTERRUPT_PriorityLevelEnable()
+                INTERRUPT_PriorityLevelEnable();
                 if(INTERRUPT_LOW_PRIORITY == int_obj->priority){ 
                     INTERRUPT_GlobalInterruptHighEnable();
                 }
@@ -284,7 +284,7 @@ static Std_ReturnType interrupt_INTx_enable(const interrupt_INTx_t *int_obj){
                 break;
         case INTERRUPT_EXTERNAL_INT2:
 #if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE 
-                INTERRUPT_PriorityLevelEnable()
+                INTERRUPT_PriorityLevelEnable();
                 if(INTERRUPT_LOW_PRIORITY == int_obj->priority){ 
                     INTERRUPT_GlobalInterruptHighEnable();
                 }

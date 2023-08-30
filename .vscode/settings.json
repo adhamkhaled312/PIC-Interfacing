@@ -12,6 +12,7 @@
         "mcal_interrupt_manager.h": "c",
         "mcal_external_interrupt.h": "c",
         "hal_eeprom.h": "c",
-        "device_config.h": "c"
+        "device_config.h": "c",
+        "mcal_internal_interrupt.h": "c"
     }
 }

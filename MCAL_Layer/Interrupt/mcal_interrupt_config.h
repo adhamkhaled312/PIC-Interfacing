@@ -41,12 +41,13 @@
 /* This macro will disable global interrupts */
 #define INTERRUPT_GlobalInterruptDisable()      (INTCONbits.GIE=0)
 /* This macro will enable peripheral interrupts */
-#define INTERRUPT_PeripheralInterruptEnable()       (INTCONbits.PEIE=1)
+#define INTERRUPT_PeripheralInterruptEnable()     (INTCONbits.PEIE=1)
 
 /* This macro will disable peripheral interrupts */
 #define INTERRUPT_PeripheralInterruptDisable()  (INTCONbits.PEIE=0)
 #endif
 /* ----------------Data Type Declarations----------------*/
+typedef void (*interrupt_handler)(void);
 typedef enum{
     INTERRUPT_LOW_PRIORITY=0,
     INTERRUPT_HIGH_PRIORITY

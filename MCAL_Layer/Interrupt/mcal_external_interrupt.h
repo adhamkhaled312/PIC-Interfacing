@@ -76,7 +76,6 @@
 #endif
 #endif
 /* ----------------Data Type Declarations----------------*/
-typedef void (*interrupt_handler)(void);
 typedef enum{
     INTERRUPT_EXTERNAL_INT0=0,
     INTERRUPT_EXTERNAL_INT1,
