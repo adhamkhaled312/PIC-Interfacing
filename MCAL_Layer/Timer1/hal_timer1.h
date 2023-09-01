@@ -70,7 +70,7 @@ typedef struct{
 /* ----------------Functions Declarations----------------*/
 /**
  * @brief initialize timer1
- * @param timer0 refrence to timer1 configurations @ref timer1_t
+ * @param timer1 refrence to timer1 configurations @ref timer1_t
  * @return Std_ReturnType status of the process
  *         (E_OK): The function is done successfully
  *         (E_NOK): The function had issue to perform this action  
@@ -78,7 +78,7 @@ typedef struct{
 Std_ReturnType timer1_init(const timer1_t *timer1);
 /**
  * @brief write a value to timer1 counter
- * @param timer0 refrence to timer1 configurations @ref timer1_t
+ * @param timer1 refrence to timer1 configurations @ref timer1_t
  * @param value the value to be written 
  * @return Std_ReturnType status of the process
  *         (E_OK): The function is done successfully
@@ -87,7 +87,7 @@ Std_ReturnType timer1_init(const timer1_t *timer1);
 Std_ReturnType timer1_deinit(const timer1_t *timer1);
 /**
  * @brief write a value to timer1 counter
- * @param timer0 refrence to timer1 configurations @ref timer1_t
+ * @param timer1 refrence to timer1 configurations @ref timer1_t
  * @param value the value to be written 
  * @return Std_ReturnType status of the process
  *         (E_OK): The function is done successfully
@@ -96,7 +96,7 @@ Std_ReturnType timer1_deinit(const timer1_t *timer1);
 Std_ReturnType timer1_write_value(const timer1_t *timer1,uint16 value);
 /**
  * @brief read value from timer1 counter
- * @param timer0 refrence to timer1 configurations @ref timer1_t
+ * @param timer1 refrence to timer1 configurations @ref timer1_t
  * @param value the value read
  * @return Std_ReturnType status of the process
  *         (E_OK): The function is done successfully
