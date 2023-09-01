@@ -69,5 +69,8 @@ void __interrupt() InterruptManager(void){
     if(PIE1bits.ADIE==INTERRUPT_ENABLE && PIR1bits.ADIF==INTERRUPT_OCCUR){
         ADC_ISR();
     }
+    if(INTCONbits.TMR0IE==INTERRUPT_ENABLE && INTCONbits.TMR0IF==INTERRUPT_OCCUR){
+        TIMER0_ISR();
+    }
 }
 #endif

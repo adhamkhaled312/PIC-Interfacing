@@ -27,7 +27,22 @@
 #define ADC_HighPrioritySet()           (IPR1bits.ADIP=1)
 /* This macro set the ADC interrupt priority to low priority */
 #define ADC_LowPrioritySet()            (IPR1bits.ADIP=0)
+#endif
 
+#if TIMER0_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro enables interrupt for ADC */
+#define TIMER0_InterruptEnable()           (INTCONbits.TMR0IE=1)
+/* This macro disables interrupt for ADC */
+#define TIMER0_InterruptDisable()          (INTCONbits.TMR0IE=0)
+/* This macro clears the interrupt flag for ADC */
+#define TIMER0_InterruptFlagClear()        (INTCONbits.TMR0IF=0)   
+#endif
+
+#if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro set the ADC interrupt priority to high priority */
+#define TIMER0_HighPrioritySet()           (INTCON2bits.TMR0IP=1)
+/* This macro set the ADC interrupt priority to low priority */
+#define TIMER0_LowPrioritySet()            (INTCON2bits.TMR0IP=0)
 #endif
 /* ----------------Data Type Declarations----------------*/
 /* ----------------Functions Declarations----------------*/
