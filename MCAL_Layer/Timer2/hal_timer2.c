@@ -37,11 +37,11 @@ Std_ReturnType timer2_init(const timer2_t *timer2){
         TIMER2_InterruptFlagClear();
         #if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE
         INTERRUPT_PriorityLevelEnable();
-        if(INTERRUPT_HIGH_PRIORITY==timer1->priority){
+        if(INTERRUPT_HIGH_PRIORITY==timer2->priority){
             INTERRUPT_GlobalInterruptHighEnable();
             TIMER2_HighPrioritySet();
         }
-        else if(INTERRUPT_LOW_PRIORITY==timer1->priority){
+        else if(INTERRUPT_LOW_PRIORITY==timer2->priority){
             INTERRUPT_GlobalInterruptLowEnable()
             TIMER2_LowPrioritySet();
         }
