@@ -57,7 +57,7 @@ typedef enum{
 }timer0_prescaler_select_t;
 
 typedef struct{
-    #if ADC_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
+    #if TIMER0_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
     void(*timer0_interrupt_handler)(void);
     interrupt_priority_cfg priority;           /* @ref interrupt_priority_cfg */
     #endif
