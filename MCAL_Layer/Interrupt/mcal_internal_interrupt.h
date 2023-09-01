@@ -30,51 +30,67 @@
 #endif
 
 #if TIMER0_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
-/* This macro enables interrupt for ADC */
+/* This macro enables interrupt for timer0 */
 #define TIMER0_InterruptEnable()           (INTCONbits.TMR0IE=1)
-/* This macro disables interrupt for ADC */
+/* This macro disables interrupt for timer0 */
 #define TIMER0_InterruptDisable()          (INTCONbits.TMR0IE=0)
-/* This macro clears the interrupt flag for ADC */
+/* This macro clears the interrupt flag for timer0 */
 #define TIMER0_InterruptFlagClear()        (INTCONbits.TMR0IF=0)   
 #endif
 
 #if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE
-/* This macro set the ADC interrupt priority to high priority */
+/* This macro set the timer0 interrupt priority to high priority */
 #define TIMER0_HighPrioritySet()           (INTCON2bits.TMR0IP=1)
-/* This macro set the ADC interrupt priority to low priority */
+/* This macro set the timer0 interrupt priority to low priority */
 #define TIMER0_LowPrioritySet()            (INTCON2bits.TMR0IP=0)
 #endif
 
 #if TIMER1_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
-/* This macro enables interrupt for ADC */
+/* This macro enables interrupt for timer1 */
 #define TIMER1_InterruptEnable()           (PIE1bits.TMR1IE=1)
-/* This macro disables interrupt for ADC */
+/* This macro disables interrupt for timer1 */
 #define TIMER1_InterruptDisable()          (PIE1bits.TMR1IE=0)
-/* This macro clears the interrupt flag for ADC */
+/* This macro clears the interrupt flag for timer1 */
 #define TIMER1_InterruptFlagClear()        (PIR1bits.TMR1IF=0)   
 #endif
 
 #if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE
-/* This macro set the ADC interrupt priority to high priority */
+/* This macro set the timer1 interrupt priority to high priority */
 #define TIMER1_HighPrioritySet()           (IPR1bits.TMR1IP=1)
-/* This macro set the ADC interrupt priority to low priority */
+/* This macro set the timer1 interrupt priority to low priority */
 #define TIMER1_LowPrioritySet()            (IPR1bits.TMR1IP=0)
 #endif
 
 #if TIMER2_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
-/* This macro enables interrupt for ADC */
+/* This macro enables interrupt for timer2 */
 #define TIMER2_InterruptEnable()           (PIE1bits.TMR2IE=1)
-/* This macro disables interrupt for ADC */
+/* This macro disables interrupt for timer2 */
 #define TIMER2_InterruptDisable()          (PIE1bits.TMR2IE=0)
-/* This macro clears the interrupt flag for ADC */
+/* This macro clears the interrupt flag for timer2 */
 #define TIMER2_InterruptFlagClear()        (PIR1bits.TMR2IF=0)   
 #endif
 
 #if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE
-/* This macro set the ADC interrupt priority to high priority */
+/* This macro set the timer2 interrupt priority to high priority */
 #define TIMER2_HighPrioritySet()           (IPR1bits.TMR2IP=1)
-/* This macro set the ADC interrupt priority to low priority */
+/* This macro set the timer2 interrupt priority to low priority */
 #define TIMER2_LowPrioritySet()            (IPR1bits.TMR2IP=0)
+#endif
+
+#if TIMER3_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro enables interrupt for timer3 */
+#define TIMER3_InterruptEnable()           (PIE2bits.TMR3IE=1)
+/* This macro disables interrupt for timer3 */
+#define TIMER3_InterruptDisable()          (PIE2bits.TMR3IE=0)
+/* This macro clears the interrupt flag for timer3 */
+#define TIMER3_InterruptFlagClear()        (PIR2bits.TMR3IF=0)   
+#endif
+
+#if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro set the timer3 interrupt priority to high priority */
+#define TIMER3_HighPrioritySet()           (IPR2bits.TMR3IP=1)
+/* This macro set the timer3 interrupt priority to low priority */
+#define TIMER3_LowPrioritySet()            (IPR2bits.TMR3IP=0)
 #endif
 /* ----------------Data Type Declarations----------------*/
 /* ----------------Functions Declarations----------------*/
