@@ -72,5 +72,8 @@ void __interrupt() InterruptManager(void){
     if(INTCONbits.TMR0IE==INTERRUPT_ENABLE && INTCONbits.TMR0IF==INTERRUPT_OCCUR){
         TIMER0_ISR();
     }
+    if(PIE1bits.TMR1IE ==INTERRUPT_ENABLE && PIR1bits.TMR1IF==INTERRUPT_OCCUR){
+        TIMER1_ISR();
+    }
 }
 #endif
