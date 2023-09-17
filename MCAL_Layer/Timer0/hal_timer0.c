@@ -50,7 +50,7 @@ Std_ReturnType timer0_init(const timer0_t *timer0){
             TIMER0_HighPrioritySet();
         }
         else if(INTERRUPT_LOW_PRIORITY==timer0->priority){
-            INTERRUPT_GlobalInterruptLowEnable()
+            INTERRUPT_GlobalInterruptLowEnable();
             TIMER0_LowPrioritySet();
         }
         #else

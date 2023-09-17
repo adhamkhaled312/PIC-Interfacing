@@ -42,7 +42,7 @@ Std_ReturnType timer2_init(const timer2_t *timer2){
             TIMER2_HighPrioritySet();
         }
         else if(INTERRUPT_LOW_PRIORITY==timer2->priority){
-            INTERRUPT_GlobalInterruptLowEnable()
+            INTERRUPT_GlobalInterruptLowEnable();
             TIMER2_LowPrioritySet();
         }
         #else
