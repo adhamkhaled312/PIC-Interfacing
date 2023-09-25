@@ -18,6 +18,8 @@
         "ecu_button.h": "c",
         "hal_adc.h": "c",
         "ecu_seven_seg.h": "c",
-        "hal_timer3.h": "c"
+        "hal_timer3.h": "c",
+        "ecu_keypad.h": "c",
+        "hal_ccp.h": "c"
     }
 }
