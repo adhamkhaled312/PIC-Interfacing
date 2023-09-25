@@ -28,5 +28,8 @@ void TIMER0_ISR(void);
 void TIMER1_ISR(void);
 void TIMER2_ISR(void);
 void TIMER3_ISR(void);
+void CCP1_ISR(void);
+void CCP2_ISR(void);
+
 #endif	/* MCAL_INTERRUPT_MANAGER_H */
 

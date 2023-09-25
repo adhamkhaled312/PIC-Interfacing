@@ -81,5 +81,11 @@ void __interrupt() InterruptManager(void){
     if(PIE2bits.TMR3IE ==INTERRUPT_ENABLE && PIR2bits.TMR3IF==INTERRUPT_OCCUR){
         TIMER3_ISR();
     }
+    if(PIE1bits.CCP1IE ==INTERRUPT_ENABLE && PIR1bits.CCP1IF==INTERRUPT_OCCUR){
+        CCP1_ISR();
+    }
+    if(PIE2bits.CCP2IE ==INTERRUPT_ENABLE && PIR2bits.CCP2IF==INTERRUPT_OCCUR){
+        CCP2_ISR();
+    }
 }
 #endif

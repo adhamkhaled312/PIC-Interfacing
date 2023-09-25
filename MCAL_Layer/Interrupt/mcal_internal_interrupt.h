@@ -92,6 +92,36 @@
 /* This macro set the timer3 interrupt priority to low priority */
 #define TIMER3_LowPrioritySet()            (IPR2bits.TMR3IP=0)
 #endif
+
+#if CCP1_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro enables interrupt for CCP1 */
+#define CCP1_InterruptEnable()           (PIE1bits.CCP1IE=1)
+/* This macro disables interrupt for CCP1 */
+#define CCP1_InterruptDisable()          (PIE1bits.CCP1IE=0)
+/* This macro clears the interrupt flag for CCP1 */
+#define CCP1_InterruptFlagClear()        (PIR1bits.CCP1IF=0)   
+#endif
+#if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro set the CCP1 interrupt priority to high priority */
+#define CCP1_HighPrioritySet()           (IPR1bits.CCP1IP=1)
+/* This macro set the CCP1 interrupt priority to low priority */
+#define CCP1_LowPrioritySet()            (IPR1bits.CCP1IP=0)
+#endif
+
+#if CCP2_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro enables interrupt for CCP2 */
+#define CCP2_InterruptEnable()           (PIE2bits.CCP2IE=1)
+/* This macro disables interrupt for CCP2 */
+#define CCP2_InterruptDisable()          (PIE2bits.CCP2IE=0)
+/* This macro clears the interrupt flag for CCP2 */
+#define CCP2_InterruptFlagClear()        (PIR2bits.CCP2IF=0)   
+#endif
+#if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro set the CCP2 interrupt priority to high priority */
+#define CCP2_HighPrioritySet()           (IPR2bits.CCP2IP=1)
+/* This macro set the CCP2 interrupt priority to low priority */
+#define CCP2_LowPrioritySet()            (IPR2bits.CCP2IP=0)
+#endif
 /* ----------------Data Type Declarations----------------*/
 /* ----------------Functions Declarations----------------*/
 #endif	/* MCAL_INTERNAL_INTERRUPT_H */
