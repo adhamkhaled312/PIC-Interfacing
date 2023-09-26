@@ -173,7 +173,7 @@ Std_ReturnType eusart_async_WriteStringBlocking(uint8 *_data, uint16 str_len){
  */
 Std_ReturnType eusart_async_WriteByteNonBlocking(uint8 _data){
     Std_ReturnType retVal=E_OK;
-    return retVal
+    return retVal;
     
 }
 /**
