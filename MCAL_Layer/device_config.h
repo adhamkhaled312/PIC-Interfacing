@@ -9,7 +9,7 @@
 /* ----------------Includes----------------*/
 #include <xc.h>
 /* ----------------Macro Declarations---------------*/
-#define _XTAL_FREQ 4000000UL
+#define _XTAL_FREQ 8000000UL
 /* ----------------Macro Functions Declarations----------------*/
 /* ----------------Data Type Declarations----------------*/
 /* ----------------Functions Declarations----------------*/

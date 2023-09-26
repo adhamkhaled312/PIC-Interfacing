@@ -87,5 +87,11 @@ void __interrupt() InterruptManager(void){
     if(PIE2bits.CCP2IE ==INTERRUPT_ENABLE && PIR2bits.CCP2IF==INTERRUPT_OCCUR){
         CCP2_ISR();
     }
+    if(PIE1bits.TXIE ==INTERRUPT_ENABLE && PIR1bits.TXIF==INTERRUPT_OCCUR){
+        EUSART_TX_ISR();
+    }
+    if(PIE1bits.RCIE ==INTERRUPT_ENABLE && PIR1bits.RCIF==INTERRUPT_OCCUR){
+        EUSART_RX_ISR();
+    }
 }
 #endif

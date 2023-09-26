@@ -122,6 +122,32 @@
 /* This macro set the CCP2 interrupt priority to low priority */
 #define CCP2_LowPrioritySet()            (IPR2bits.CCP2IP=0)
 #endif
+
+#if EUSART_TX_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro enables interrupt for EUSART TX */
+#define EUSART_TX_InterruptEnable()           (PIE1bits.TXIE=1)
+/* This macro disables interrupt for EUSART TX */
+#define EUSART_TX_InterruptDisable()          (PIE1bits.TXIE=0)
+#endif
+#if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro set the EUSART TX interrupt priority to high priority */
+#define EUSART_TX_HighPrioritySet()           (IPR1bits.TXIP=1)
+/* This macro set the EUSART TX interrupt priority to low priority */
+#define EUSART_TX_LowPrioritySet()            (IPR1bits.TXIP=0)
+#endif
+
+#if EUSART_RX_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro enables interrupt for EUSART RX */
+#define EUSART_RX_InterruptEnable()           (PIE1bits.RCIE=1)
+/* This macro disables interrupt for EUSART RX */
+#define EUSART_RX_InterruptDisable()          (PIE1bits.RCIE=0)
+#endif
+#if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro set the EUSART RX interrupt priority to high priority */
+#define EUSART_RX_HighPrioritySet()           (IPR1bits.RCIP=1)
+/* This macro set the EUSRAT RX interrupt priority to low priority */
+#define EUSART_RX_LowPrioritySet()            (IPR1bits.RCIP=0)
+#endif
 /* ----------------Data Type Declarations----------------*/
 /* ----------------Functions Declarations----------------*/
 #endif	/* MCAL_INTERNAL_INTERRUPT_H */
