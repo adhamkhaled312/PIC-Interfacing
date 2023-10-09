@@ -93,5 +93,11 @@ void __interrupt() InterruptManager(void){
     if(PIE1bits.RCIE ==INTERRUPT_ENABLE && PIR1bits.RCIF==INTERRUPT_OCCUR){
         EUSART_RX_ISR();
     }
+    if(PIE1bits.SSPIE==INTERRUPT_ENABLE && PIR1bits.SSPIF==INTERRUPT_OCCUR){
+        MSSP_I2C_ISR();
+    }
+    if(PIE2bits.BCLIE==INTERRUPT_ENABLE && PIR2bits.BCLIF==INTERRUPT_OCCUR){
+        MSSP_I2C_BC_ISR();
+    }
 }
 #endif

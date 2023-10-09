@@ -148,6 +148,26 @@
 /* This macro set the EUSRAT RX interrupt priority to low priority */
 #define EUSART_RX_LowPrioritySet()            (IPR1bits.RCIP=0)
 #endif
+
+#if MSSP_I2C_INTERRUPT_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro enables interrupt for MSSP I2C */
+#define MSSP_I2C_InterruptEnable()             (PIE1bits.SSPIE=1)
+#define MSSP_I2C_BUS_COL_InterruptEnable()     (PIE2bits.BCLIE=1)
+/* This macro disables interrupt for MSSP I2C */
+#define MSSP_I2C_InterruptDisable()            (PIE1bits.SSPIE=0)
+#define MSSP_I2C_BUS_COL_InterruptEnable()     (PIE2bits.BCLIE=0)
+/* This macro clears the interrupt flag for MSSP I2C */
+#define MSSP_I2C_InterruptFlagClear()          (PIR1bits.SSPIF=0)
+#define MSSP_I2C_BUS_COL_InterruptFlagClear()  (PIR2bits.BCLIF=0)
+#endif
+#if INTERRUPT_PRIORITY_LEVELS_ENABLE==INTERRUPT_FEATURE_ENABLE
+/* This macro set the MSSP I2C interrupt priority to high priority */
+#define MSSP_I2C_HighPrioritySet()           (IPR1bits.SSPIP=1)
+#define MSSP_I2C_BUS_COL_HighPrioritySet()   (IPR2bits.BCLIP=1)
+/* This macro set the MSSP I2C interrupt priority to low priority */
+#define MSSP_I2C_LowPrioritySet()            (IPR1bits.MSSIP=0)
+#define MSSP_I2C_BUS_COL_HighPrioritySet()   (IPR2bits.BCLIP=0)
+#endif
 /* ----------------Data Type Declarations----------------*/
 /* ----------------Functions Declarations----------------*/
 #endif	/* MCAL_INTERNAL_INTERRUPT_H */
